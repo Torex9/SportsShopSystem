@@ -11,7 +11,7 @@ public class SportsShopSystem {
     public static void menu() {
         Scanner sc = new Scanner(System.in); 
 
-        int test;
+        int Selection;
         try {
             do {
 
@@ -25,22 +25,22 @@ public class SportsShopSystem {
                 System.out.println("Please enter a number: ");
         
                 sc = new Scanner(System.in);
-                test = sc.nextInt();
+                Selection = sc.nextInt();
         
         
-                switch (test) {
+                switch (Selection) {
                     case 0:
-                        quit(test);
+                        quit(Selection);
                         break;       
     
                     case 1:
-                        viewItems(test);
+                        viewItems(Selection);
                         break;
                     case 2:
-                        buyItems(test);
+                        buyItems(Selection);
                         break;
                     case 3:
-                        addStock(test);
+                        addStock(Selection);
                         break;
                     default:
                         System.out.println("!!!!! please select a menu option to continue !!!!! \n" );
@@ -48,7 +48,7 @@ public class SportsShopSystem {
             } 
             
             
-            while(test != 0 );
+            while(Selection != 0 );
         }
         catch(Exception ex) {
             System.out.println("!!!!! Please select a Valid menu option to continue !!!!!");
@@ -56,22 +56,22 @@ public class SportsShopSystem {
         }
     }
 
-    public static void viewItems( int testIn ){
+    public static void viewItems( int SelectionIn ){
             System.out.println("1 \n");
             System.out.println("View Items \n");
     }
     
-    public static void buyItems( int testIn ){
+    public static void buyItems( int SelectionIn ){
             System.out.println("2 \n");
             System.out.println("Buy Items \n");
     }
     
-    public static void addStock( int testIn ){
+    public static void addStock( int SelectionIn ){
             System.out.println("3 \n");
             System.out.println("Add Stock \n");
     }
     
-    public static void quit( int testIn ){
+    public static void quit( int SelectionIn ){
             System.out.println("0 \n");
             System.out.println("***** Thank you for your visit ***** \n" );
     }
